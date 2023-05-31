@@ -1,0 +1,30 @@
+@import './shared.scss';
+
+.game-stats__list {
+  width: 300px;
+
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    span {
+      min-width: 75px;
+
+      font-family: 'DS-Digital';
+      font-weight: bold;
+
+      color: rgb(255, 160, 44);
+      font-size: 20px;
+      line-height: 100%;
+      padding: 4px;
+      letter-spacing: 4px;
+
+      text-align: center;
+
+      @include fieldDesign;
+    }
+  }
+}

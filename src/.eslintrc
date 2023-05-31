@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "eslint-config-airbnb-base"
+  ],
+  "globals": {
+    "document": "readonly",
+    "Image": "readonly",
+    "MouseEvent": "readonly",
+    "prompt": "readonly",
+    "localStorage": "readonly",
+    "window": "readonly"  
+  }
+}

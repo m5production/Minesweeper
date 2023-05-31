@@ -1,0 +1,127 @@
+@import './shared.scss';
+
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+
+  padding-bottom: 5vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+
+  background-color: antiquewhite;
+
+  scroll-behavior: smooth;
+}
+
+h1 {
+  color: grey;
+}
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  font-size: 20px;
+}
+
+.number-of-mines-select,
+.reset-btn {
+  font-size: inherit;
+}
+
+.options-list__item:first-of-type {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.number-of-mines-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mines-field {
+  max-width: 500px;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+
+  @include fieldDesign;
+}
+
+.mines-field__cell {
+  aspect-ratio: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  font-weight: bold;
+  line-height: 100%;
+
+  &.closed {
+    border: 2px outset white;
+    background-color: grey;
+  }
+
+  &.flagged {
+    border: 2px outset white;
+    background-color: grey;
+    background-image: url('./assets/field-cell-types/flag.svg');
+  }
+
+  &.bomb {
+    background-image: url('./assets/field-cell-types/bomb.png');
+
+    &.bomb.exploded {
+      background-color: red;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.end-game-msg {
+  width: clamp(300px, 80vw, 500px);
+  height: 300px;
+
+  position: fixed;
+  left: center;
+  top: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 40px;
+  font-weight: bold;
+
+  background-color: rgba(0, 128, 0, 0.587);
+
+  border: 10px solid yellow;
+  border-radius: 20px;
+}

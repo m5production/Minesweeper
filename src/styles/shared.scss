@@ -1,0 +1,11 @@
+@mixin fieldDesign {
+  background-color: teal;
+  border: 10px ridge #c1c1c1;
+}
+
+@font-face {
+  font-family: "DS-Digital";
+  src: url("./assets/fonts/DS-DIGIB.TTF");
+  font-weight: bold;
+  font-style: normal;
+}

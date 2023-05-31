@@ -1,0 +1,23 @@
+@import './shared.scss';
+
+.score-table {
+  width: clamp(300px, 80vw, 500px);
+
+  position: fixed;
+  top: center;
+  left: center;
+
+  @include fieldDesign;
+
+  & th {
+    font-size: 40px;
+  }
+}
+
+.score-table__tr {
+
+  & td {
+    font-size: 25px;
+    text-align: center;
+  }
+}
